@@ -1,0 +1,7 @@
+{
+  "name": "ShareLocarion",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

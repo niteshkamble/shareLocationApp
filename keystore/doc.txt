@@ -1,0 +1,12 @@
+// ========Google Auth API client location==========
+// env
+// capacitor.config.ts
+// index.html
+// android : string.xml     <string name="server_client_id">  </string>
+// update ID to firebase signin method: google sign in
+
+
+// <!-- Geolocation API Permission-->
+//     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+//     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+//     <uses-feature android:name="android.hardware.location.gps" />

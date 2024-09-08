@@ -1,0 +1,23 @@
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <!-- Map View Card -->
+      <ion-col size="12">
+        <app-mapview-card></app-mapview-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <!-- Unique Code Card (Share Link) -->
+      <ion-col size="12" size-md="6">
+        <app-location-code-card/>
+      </ion-col>
+
+      <!-- Enter Code Card (View Location) -->
+      <ion-col size="12" size-md="6" *ngIf="!isRoomActive">
+        <app-enter-code-card />
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>

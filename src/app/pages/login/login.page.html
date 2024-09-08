@@ -1,0 +1,29 @@
+<ion-content [fullscreen]="true" class="ion-padding login-content">
+  <div class="login-container">
+    <div class="login-header">
+      <h2>Login</h2>
+    </div>
+
+    <div class="login-logo-container">
+      <img src="https://via.placeholder.com/150" alt="App Logo" class="login-logo" />
+    </div>
+
+    <div class="login-title">
+      <h1>Welcome to ShareLocation</h1>
+      <p>Share your live location with ease.</p>
+    </div>
+
+    <ion-button expand="block" fill="solid" color="primary" (click)="loginAnonymously()" class="login-button">
+      Guest Login
+    </ion-button>
+
+    <!-- <ion-button expand="block" fill="solid" color="primary" (click)="loginWithGoogle()" class="login-button">
+      <ion-icon slot="start" name="logo-google"></ion-icon>
+      Continue with Google
+    </ion-button> -->
+
+    <div class="login-footer">
+      <p>By continuing, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
+    </div>
+  </div>
+</ion-content>

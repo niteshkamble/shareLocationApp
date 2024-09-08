@@ -1,0 +1,63 @@
+<ion-card [ngClass]="{ 'active-glow': isRoomActive }">
+  <ion-card-content>
+    <!-- Dashed-lined, disabled input view -->
+    <ion-item>
+      <ion-input [(ngModel)]="uniqueCode" readonly class="dashed-input"></ion-input>
+      <ion-button (click)="copyToClipboard()" fill="outline" slot="end">
+        Copy
+      </ion-button>
+    </ion-item>
+
+    <!-- Description text -->
+    <ion-text class="ion-text-center">
+      <p>{{ description }}</p>
+    </ion-text>
+    
+
+    <!-- Room is active -->
+    <div *ngIf="isRoomActive" class="active-room">
+      <ion-text color="success" class="active-text">
+        <small>{{ spectators.length }} {{ spectators.length === 1 ? 'person is' : 'people are' }} spectating</small>
+      </ion-text>
+
+      <ion-list>
+        <ion-item *ngFor="let spectator of spectators" class="spectator-item">
+          <!-- Circle with Initial -->
+          <div class="initial-circle">{{ getInitial(spectator.name) }}</div>
+          <!-- Spectator Name and Last Online Time -->
+          <ion-label>
+            <h3>{{ spectator.name }}</h3>
+            <p>Last active: {{ spectator.lastOnline }}</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+
+      <ion-row style="justify-content: space-evenly;">
+        <ion-button size="Small" expand="block" (click)="copyToClipboard()" class="share-button">
+          Share Code
+        </ion-button>
+        <ion-button color="danger" size="Small" expand="block" (click)="stopLocationShare()" class="share-button">
+          Stop Sharing
+        </ion-button>
+      </ion-row>
+    </div>
+
+
+    <!-- Room is not active -->
+    <ion-row style="justify-content: space-evenly;" *ngIf="!isRoomActive">
+      <ion-col size="2">
+        <!-- Refresh button -->
+        <ion-button icon-only (click)="refreshCode()" class="share-button">
+          <ion-icon name="refresh-outline" style="color: white;"></ion-icon>
+        </ion-button>
+      </ion-col>
+      <ion-col size="9">
+        <!-- Share Link button -->
+        <ion-button expand="block" (click)="shareLocation()" class="share-button">
+          Share
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    
+  </ion-card-content>
+</ion-card>

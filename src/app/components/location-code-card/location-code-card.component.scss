@@ -1,0 +1,55 @@
+.dashed-input {
+    border: 1px  #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    margin-right: 10px;
+    flex: 1;
+    letter-spacing: 4px;
+  }
+  
+  .share-button {
+    margin-top: 12px;
+  }
+
+  .active-room {
+    text-align: center;
+  }
+  
+  .active-text p {
+    
+    font-weight: bold;
+  }
+  .initial-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #3880ff;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+  }
+  .spectator-item {
+    margin-bottom: 6px; 
+    border-radius: 8px;
+    padding: 6px;
+  }
+
+  .active-glow {
+    animation: glow 2s infinite;
+  }
+  
+  @keyframes glow {
+    0% {
+      box-shadow: 0 0 5px rgba(0, 255, 0, 0.5); 
+    }
+    50% {
+      box-shadow: 0 0 15px rgba(0, 255, 0, 0.7);
+    }
+    100% {
+      box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+    }
+  }

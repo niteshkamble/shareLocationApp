@@ -1,0 +1,46 @@
+<div>
+
+  <div [ngStyle]="{'height': mapHeight}" id="map" class="small-map"></div>
+
+  <div class="card-center-overlay" *ngIf="userLocation?.isDefault=='default'">
+    <ion-card>
+      <ion-card-content>
+        <p>Location permission is required to proceed.</p>
+        <div class="button-container">
+          <ion-button expand="round" (click)="getUserLocation()">
+            Reload
+          </ion-button>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <ion-col size="auto" class="right-nav-button">
+
+    <ion-row>
+      <ion-button color="light" fill="solid" (click)="logOut()">
+        <ion-icon slot="icon-only" name="log-out"></ion-icon>
+      </ion-button>
+    </ion-row>
+
+    <ion-row>
+      <ion-button color="light" fill="solid">
+        <ion-icon slot="icon-only" name="settings"></ion-icon>
+      </ion-button>
+    </ion-row>
+
+    <ion-row>
+      <ion-button color="light" fill="solid" (click)="toggleMapView()">
+        <ion-icon slot="icon-only" name="expand" *ngIf="mapMode== 'min-map'"></ion-icon>
+        <ion-icon slot="icon-only" name="contract" *ngIf="mapMode== 'full-map'"></ion-icon>
+      </ion-button>
+    </ion-row>
+
+    <ion-row>
+      <ion-button color="light" fill="solid" (click)="getUserLocation()">
+        <ion-icon slot="icon-only" name="locate"></ion-icon>
+      </ion-button>
+    </ion-row>
+
+  </ion-col>
+</div>

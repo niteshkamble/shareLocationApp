@@ -1,0 +1,10 @@
+<ion-app>
+  <ion-grid *ngIf="loading">
+    <ion-row style="height: 100%;" class="ion-align-items-center ion-justify-content-center">
+      <ion-col>
+        <ion-spinner color="primary" name="lines-sharp"></ion-spinner>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-router-outlet *ngIf="!loading"></ion-router-outlet>
+</ion-app>

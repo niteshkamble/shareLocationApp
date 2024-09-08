@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">ShareLocarion</string>
+    <string name="title_activity_main">ShareLocarion</string>
+    <string name="package_name">com.sharelocation.android</string>
+    <string name="custom_url_scheme">com.sharelocation.android</string>
+    <string name="server_client_id">714343719403-eeksodnkhgghdub8arjgpl1ut3td1pai.apps.googleusercontent.com</string>
+
+</resources>

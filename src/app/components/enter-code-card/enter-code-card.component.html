@@ -1,0 +1,18 @@
+<ion-card>
+  <ion-card-content>
+    <ion-item>
+      <ion-input [(ngModel)]="enteredCode" placeholder="Enter Code" class="dashed-input" clearInput></ion-input>
+    </ion-item>
+    <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+
+    <ion-button expand="block" color="primary" (click)="viewLocation()" class="view-button">
+      View
+    </ion-button>
+
+    <!-- Description text -->
+    <ion-text class="ion-text-center">
+      <p>Enter a code to view person's location.</p>
+    </ion-text>
+ 
+  </ion-card-content>
+</ion-card>
